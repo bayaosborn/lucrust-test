@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>Lucrust | Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+
+<script defer src="userProfile19112b84b6326b674b00.js"></script></head>
+
+<body>
+
+    <h1>Profile Page</h1>
+    <div id="success-message">Profile Updated Successfully</div>
+  <div id="error-message"></div>
+  <div class="img-profile">
+    <img id="preview">
+    <input type="file" id="profile-pic" name="profile-pic">
+  </div>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="email"><br><br>
+
+        <label for="bio">Biography:</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="50" ></textarea><br><br>
+
+       
+
+        <button type="button" id="save-profile-btn">Save</button>
+    </form>
+
+
+<style>
+  /* Styles for the profile page */
+
+/* Set default font family and size */
+body {
+  font-family: 'Heebo', sans-serif;  font-size: 16px;
+}
+
+/* Center the page header */
+h1 {
+  text-align: center;
+}
+
+/* Style for success message */
+#success-message {
+  color: green;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Style for error message */
+#error-message {
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Style for profile image */
+.img-profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style for profile image preview */
+#preview {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/* Style for form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for form input fields */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for form submit button */
+#save-profile-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Change button color on hover */
+#save-profile-btn:hover {
+  background-color: #3e8e41;
+}
+
+</style>
+
+    
+
+
+</body>
+
+</html>

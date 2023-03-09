@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucrust | Sign In</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script defer src="signIn8bfdeefec7dfb8b7e4eb.js"></script></head>
+
+<body>
+
+
+
+  <h1>Sign In</h1>
+  <form id="signin-form">
+    <label>Email:</label>
+    <input type="email" id="email">
+    <label>Password:</label>
+    <input type="password" id="password">
+    <label for="show-password">
+      <input type="checkbox" id="show-password"> Show Password
+    </label>
+    <p id="reset-password-btn"><a href="forgot-password.html">Forgot Password?</a></p>
+    <button type="submit" id="signin-button" class="success">Sign In</button>
+  </form>
+
+
+  <div id="success-message">Sign in successful</div>
+  <div id="error-message"></div>
+  
+
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+  }
+
+  :root {
+    --primary-color: #3772ff;
+    --secondary-color: #08605f;
+    --auxilliary-color: #8e936d;
+    --last-color: #a2ad59;
+  }
+
+  body {
+    font-family: 'Heebo', sans-serif;  }
+
+  h1 {
+    font-size: 1.3em;
+    text-align: center;
+    color: rgb(0, 60, 255);
+  }
+
+  /* Form styling */
+  .logo {
+    height: 1.8em;
+    width: 1.8em;
+    padding: 1em O;
+  }
+
+  .logo-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5em;
+
+  }
+
+  .logo-head a h3 {
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  label {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Sign up button styling */
+  #signup-button {
+    background-color: #4CAF50;
+  }
+
+  /* Sign in button styling */
+  #signin-button {
+    background-color: #008CBA;
+  }
+
+  /* Error message styling */
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+
+
+
+
+  #success-message {
+    display: none;
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    color: white;
+    padding: .5em;
+    border-radius: .5em;
+    text-align: center;
+  }
+
+  #error-message {
+    display: none;
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    padding: 1em;
+    border-radius: .5em;
+    text-align: center;
+  }
+  </style>
+
+
+</body>
+
+
+</html>

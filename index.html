@@ -1,1 +1,455 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Lucrust
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  
+
+<script defer src="index6e10ec12baf228a9c9d9.js"></script></head>
+
+<body>
+
+  <div class="header">
+    <div class="logo" id="logo">
+    </div>
+
+    <div class="search-wrapper" onclick="goToSearch()">
+      <div class="search" id="search" >
+        <a href="search.html"></a>
+      </div>
+    </div>
+  </div>
+ 
+
+
+
+
+  <div class="posts" id="posts">
+    <div class="loader" id="loader">
+      
+    </div>
+
+  </div>
+
+  <div class="footer" id="footer">
+    <div class="home" id="home" onclick="goToHome()">
+      <img src="https://img.icons8.com/fluency-systems-filled/24/003cff/home.png" />
+      <p class="home-text">Home</p>
+    </div>
+
+    <div class="add-post" id="add-post" onclick="goToAddPost()">
+      <img src="https://img.icons8.com/fluency-systems-regular/32/1A1A1A/add--v1.png" id="add-post-img" />
+      <p class="add-post-text">Add Post</p>
+
+    </div>
+
+    <div class="saves" id="saves" onclick="goToSaves()">
+      <img src="https://img.icons8.com/fluency-systems-regular/24/1A1A1A/bookmark-ribbon--v1.png" />
+      <p class="saves-text">Saved</p>
+
+    </div>
+
+      <div class="profile-wrapper" onclick="goToAccount()">
+        <div class="profile" id="profile">
+          
+      </div>
+      
+        <p class="profile-text">Account</p>
+
+      </div>
+  </div>
+
+
+
+
+  <script>
+    function goToSearch() {
+      window.location = "search.html";
+    }
+    function goToHome() {
+      window.location = "index.html";
+    }
+    function goToSaves() {
+      window.location = "saved.html";
+    }
+    function goToAddPost() {
+      window.location = "add-post.html";
+
+    }
+    function goToAccount() {
+      window.location = "account.html";
+    }
+  </script>
+
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #3772ff;
+  --secondary-color: #08605f;
+  --auxilliary-color: #8e936d;
+  --last-color: #a2ad59;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white;
+  padding: .3em;
+}
+
+.logo img {
+
+  background-size: cover;
+  height: 2em;
+  width: 2em;
+  margin-left: 1em;
+}
+
+.search img {
+
+  background-size: cover;
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 1em;
+
+}
+
+.post-btns {
+  display: flex;
+  margin: .2em 2em;
+  justify-content: space-around;
+}
+
+.post a {
+  text-decoration: none;
+  color: black;
+}
+
+.like-wrapper {
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.save-wrapper {
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.post {
+  margin-bottom: 1em;
+}
+.post h2 {
+  font-size: larger;
+  margin-top: .2em;
+}
+.posts {
+  margin-top: 3em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.post img {
+  border-radius: 1em;
+  height: 15em;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white;
+  padding: .5em 0;
+  border-top: rgb(189, 188, 188) solid .5px;
+}
+
+.like {
+cursor: pointer;
+background-size: cover;
+}
+
+.home img {
+
+  background-size: cover;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+}
+
+.saves img {
+
+  background-size: cover;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+}
+
+.add-post img {
+
+  background-size: cover;
+  height: 2em;
+  width: 2em;
+}
+
+.profile {
+
+  height: 2em;
+  width: 2em;
+  border: #3772ff 2px solid;
+  border-radius: 2em;
+  cursor: pointer;
+  margin-right: 1em;
+}
+.profile img{
+
+height: 2em;
+width: 2em;
+border-radius: 2em;
+cursor: pointer;
+object-fit: cover;
+
+}
+
+.home {
+  cursor: pointer;
+}
+
+.add-post {
+  cursor: pointer;
+}
+
+.saves {
+  cursor: pointer;
+}
+
+.home-text,
+.saves-text,
+.add-post-text,
+.profile-text {
+  display: none;
+}
+
+
+.loader img{
+  width: 5em;
+  height: 5em;
+  animation: spin 2s linear infinite;
+  margin-top: 40vh;
+  margin-left: 40%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 680px) {
+  body {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+  }
+
+  .header {
+    justify-content: center;
+    align-items: centre;
+    margin-left: 3em;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .search {
+    cursor: pointer;
+  }
+
+  .search img {
+    height: 1em;
+    width: 1em;
+    margin: 0;
+  }
+
+
+  .footer {
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    padding-left: 1em;
+    justify-content: center;
+    border-right: rgb(189, 188, 188) solid .5px;
+    align-items: left;
+
+  }
+
+  .posts {
+    margin-top: 2.5em;
+    margin-left: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: visible;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .post img {
+    border-radius: 1em;
+    background-size: cover;
+    height: 10em;
+    width: 100%;
+  }
+
+  .post {
+    padding-right: 1em;
+    width: 28%;
+  }
+
+  .post h2 {
+    font-size: .9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 2.3em;
+    width: 100%;
+    margin: .5em;
+  }
+
+  .post p {
+    font-size: smaller;
+    margin-left: .5em;
+  }
+
+  .home {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: small;
+
+  }
+
+  .home img {
+
+    background-size: cover;
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .saves {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: small;
+    margin-top: 1em;
+
+
+  }
+
+  .saves img {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 1.5em;
+
+  }
+
+  .add-post {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: small;
+    margin-top: 1em;
+  }
+
+  .add-post img {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 1.5em;
+
+  }
+
+  .profile-wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: small;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+
+
+
+
+  .home-text,
+  .saves-text,
+  .add-post-text,
+  .profile-text {
+    display: block;
+  }
+  .loader img{
+    width: 5em;
+    height: 5em;
+    animation: spin 2s linear infinite;
+    margin-top: 40vh;
+    margin-left: auto;
+    object-fit: cover;
+    background-size: cover;
+  }
+
+
+}
+  </style>
+
+</body>
+
+</html>

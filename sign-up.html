@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>
+    Lucrust | Sign Up
+  </title>
+<script defer src="signUpe8d810c846fbb0ffffc3.js"></script></head>
+
+<body>
+  <header>
+    <div class="logo" id="logo"></div>
+    <h1>Lucrust</h1>
+  </header>
+
+
+  <div id="success-message">Sign up successful</div>
+  <div id="error-message"></div>
+
+  <p class="hero">We believe that great ideas can come from anywhere, and we are committed to enabling everyone to have
+    a voice in
+    the world of innovation. Join our community today and let's work together to improve the world through creativity
+    and invention.</p>
+
+  <form id="signup-form">
+    <h2>Sign Up</h2>
+    <label>Email:</label>
+    <input type="email" id="email" placeholder="hello@example.com" name="email">
+    <label>Password:</label>
+    <input type="password" id="password" name="password">
+    <label for="show-password">
+      <input type="checkbox" id="show-password"> Show Password
+    </label>
+    <button type="submit" id="signup-button">Sign Up</button>
+  </form>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    :root {
+      --primary-color: #3772ff;
+     
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;    }
+
+    .hero {
+      margin: 0 1em;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1em;
+    }
+
+    .logo img {
+
+      background-size: cover;
+      height: 2em;
+      width: 2em;
+    }
+
+    h1 {
+      font-size: 1.3em;
+      text-align: center;
+      color: #4CAF50;
+      padding: .5em;
+    }
+    h2 {
+      font-size: 1em;
+      text-align: center;
+      color: #4CAF50;
+      padding: .5em;
+    }
+
+    /* Form styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    label {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Sign up button styling */
+    #signup-button {
+      background-color: #4CAF50;
+    }
+
+    /* Sign in button styling */
+    #signin-button {
+      background-color: #008CBA;
+    }
+
+    /* Error message styling */
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+
+    #success-message {
+      display: none;
+      position: absolute;
+      top: 2em;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: green;
+      color: white;
+      padding: .5em;
+      border-radius: .5em;
+      text-align: center;
+    }
+
+    #error-message {
+      display: none;
+      position: absolute;
+      top: 2em;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: red;
+      color: white;
+      padding: 1em;
+      border-radius: .5em;
+      text-align: center;
+    }
+  </style>
+
+
+</body>
+
+
+</html>

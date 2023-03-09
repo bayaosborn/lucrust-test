@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Lucrust | Search
+  </title>
+</head>
+
+<body>
+  <div class="container" id="search-container">
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search...">
+      <button type="submit" id="search-button">Hello</button>
+    </form>
+
+    <div class="search-results" id="search-results">
+
+
+    </div>
+  </div>
+
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    :root {
+      --primary-color: #3772ff;
+      --secondary-color: #08605f;
+      --auxilliary-color: #8e936d;
+      --last-color: #a2ad59;
+    }
+
+    /* Add some padding and a grey background color to containers */
+    #search-container {
+      margin-top: .5em;
+    }
+
+    /* Style the input elements and the submit button */
+    input[type=text],
+    input[type=submit] {
+      width: 100%;
+
+      display: inline-block;
+      box-sizing: border-box;
+    }
+
+    .search {
+      height: 2.5em;
+      width: 2.5em;
+      margin-left: .5em;
+      border-radius: 2em;
+      background-color: var(--last-color);
+    }
+
+    /* Add margins to the checkbox */
+    input[type=checkbox] {
+      margin-top: 16px;
+    }
+
+    /* Style the submit button */
+    input[type=submit] {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+    }
+
+    input[type=submit]:hover {
+      opacity: 0.8;
+    }
+
+    #search-form {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-input {
+      border: 1px var(--auxilliary-color) solid;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 4px;
+      flex-grow: 1;
+    }
+
+    button[type="submit"] {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
+
+    searchForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const query = searchInput.value;
+      search(query);
+    });
+
+    const articles = document.querySelectorAll('.title');
+
+    const search = query => {
+      for (let i = 0; i < articles.length; i++) {
+        const article = articles[i];
+        const text = article.textContent;
+        if (text.toLowerCase().includes(query.toLowerCase())) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      }
+    };
+
+
+  </script>
+
+</body>
+
+</html>
